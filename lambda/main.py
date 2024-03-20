@@ -14,7 +14,7 @@ def handler(event, context):
     table = dynamodb.Table(os.environ.get("TABLE_NAME"))
 
     # Read the "VISIT COUNT" key (or create it if it doesnt exist)
-    response = table.get_item(key={"key": "visit_count"})
+    response = table.get_item(Key={"key": "visit_count"})
     if "Item" in response:
         visit_count = response["Item"]["value"]
     else:
