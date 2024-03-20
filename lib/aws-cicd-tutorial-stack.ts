@@ -2,6 +2,7 @@ import * as cdk from 'aws-cdk-lib'
 import { Construct } from 'constructs'
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 import * as lambda from 'aws-cdk-lib/aws-lambda'
+import * as dynamodb from "aws-cdk-lib/aws-dynamodb"
 import * as dotenv from 'dotenv'
 
 export class AwsCicdTutorialStack extends cdk.Stack {
