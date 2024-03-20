@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib'
 import { Construct } from 'constructs'
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 import * as lambda from 'aws-cdk-lib/aws-lambda'
-import * as dynamodb from "aws-cdk-lib/aws-dynamodb"
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb'
 import * as dotenv from 'dotenv'
 
 export class AwsCicdTutorialStack extends cdk.Stack {
@@ -29,9 +29,9 @@ export class AwsCicdTutorialStack extends cdk.Stack {
         VERSION: process.env.VERSION || '0.0',
         TABLE_NAME: table.tableName,
       },
-    }),
+    })
 
-    table.grantReadWriteData(lambdaFunction);
+    table.grantReadWriteData(lambdaFunction)
 
     const functionUrl = lambdaFunction.addFunctionUrl({
       authType: lambda.FunctionUrlAuthType.NONE,
